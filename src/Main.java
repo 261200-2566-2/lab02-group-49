@@ -1,17 +1,25 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.print("Hello and welcome!");
+        Lab02.ap();
+    }
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+    static class Lab02{
+        static void ap(){
+            AirPurifier a = new AirPurifier("Pro","001");
+            AirPurifier b = new AirPurifier("002");
+            AirPurifier c = new AirPurifier("Basic","003");
+            AirPurifier d = new AirPurifier("XX","004");
+            AirPurifier e = new AirPurifier("005");
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
+            System.out.println("There are " + AirPurifier.modelCount + " models.");
+            System.out.println(AirPurifier.mostPopularModel() + " is most popular model.");
+
+            a.turnOn();
+            System.out.println("a's power is " + a.power + ".");
+            a.turnOff();
+            System.out.println("a's power is " + a.power + ".");
+
+            System.out.println("c's power is " + c.power + ".");
         }
     }
 }
